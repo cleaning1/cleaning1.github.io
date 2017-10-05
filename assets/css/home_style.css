@@ -60,7 +60,6 @@ section.jumbotron.container-fluid {
 	padding-bottom: 2.5%;
 
 }
-
 .left {
 	float: left;
 	width: 50%;
@@ -78,7 +77,10 @@ table {
 ul {
 	font-size: 16px;
 }
+.noPadLeft{
+  padding-left: 0;
 
+}
 #about h2, #contact h2 {
 	font-family: 'Lora';
 	font-weight: 700;
