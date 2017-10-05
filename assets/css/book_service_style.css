@@ -1,0 +1,89 @@
+body{
+	padding: 4%;
+}
+div.jumbotron.container-fluid {
+	background-image: none;
+	background-color: #fff;
+	color: #000;
+}
+
+h3{
+	font-size: 3rem;
+	padding-bottom: 2rem;
+}
+h4 {
+	padding-bottom: 2rem;
+	font-size:2rem;
+}
+#msg{
+	width: 50%;
+}
+.forms{
+	padding: 3%;
+}
+.btn-dark {
+    color: #fff;
+	background-color: #2D3142;
+	border-color: rgba(176,	215, 255, 0.7);
+	margin-right: 0.5rem;
+}
+.btn {
+	font-size: 16px;
+
+}
+li.selected{
+	background-color: #fff;
+}
+.spacer{
+	padding: 2% 0;
+}
+.col-md-4{
+	padding-bottom: 5%;
+	padding-left: 0;
+}
+.form-control {
+    max-width: 338px;
+    display: block;
+
+}
+.padLeft{
+	padding-left: 20%;
+
+}
+.sq-form {
+	width: 6rem;
+	text-align: center;
+	display: inline;
+	margin-left: 4rem;
+	margin-right: 4rem;
+}
+.active {
+	background-color: rgba(176,	215, 255, 1);
+}
+.btn-light{
+	margin-right: 1rem;
+}
+.btn-primary-sq{
+	width: 4rem;
+	height: 4rem;
+}
+label.btn.btn-dark.active{
+    background-color: rgba(176,	215, 255, 1);
+    color: black;
+}
+.btn-light:focus, .btn-light:visited, .btn-light:active, .btn-light:hover {
+    background-color: rgba(176,	215, 255, 1);
+}
+.btn-primary.focus, .btn-primary:focus{
+	background-color: #337ab7;
+}
+.btn-dark:focus, .btn-dark:active, .btn-dark:hover{
+	background-color: rgba(176, 215, 255, 0.7);
+	border-color: none;
+}
+/*removes blue border when buttons are selected*/
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child),
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle), 
+input.btn.btn-info.focus, input.btn.btn-info.active, input.btn.btn-info:hover {
+  outline: none; 
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Mei's Cleaning Service</title>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta content="320" name="MobileOptimized">
+	<link href="assets/images/fav_icon.png" rel="icon" type="image/png" sizes="16x16">
+	<link href="assets/images/fav_icon32.png" rel="icon" type="image/png" sizes="32x32">
+	<link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="assets/css/bootstrap-select.css" rel="stylesheet">
+	<link href="assets/css/home_style.css" rel="stylesheet">
+	<link href="assets/css/book_service_style.css" rel="stylesheet">
+	<link href="assets/css/datepicker.css" rel="stylesheet">
+	<script src="assets/js/jquery-2.1.4.js"></script>
+	<script
+        src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+		integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
+		crossorigin="anonymous">
+	</script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
+	
+	<div class='jumbotron container-fluid'>
+	<!-- nav bar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top container-fluid">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+					<a id="homeBtn" class="navbar-brand" href="index.html">Mei's</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+					<ul class="nav navbar-nav">
+						<li><a  class="goTop selected">Book Service</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a id="nav-about" href="index.html#about">About</a></li>
+						<li><a href="index.html#contact">Contact</a></li>
+					</ul>
+			</div>
+		</nav>
+<!--end of header.ejs ========================================== -->
+
+
+<form action="https://formspree.io/shengmei2012@gmail.com" method="POST">
+
+
+<div class="container">
+  <p>Book online and schedule your home cleaning for as early as tomorrow!</p>
+<span>
+Date:
+<input name="date" class="form-control" placeholder="pick a date" id="datepicker">
+</span>
+<span class="forms"> </span>
+<span>
+Time:
+
+<select required name="time" class="selectpicker form-control" data-width="auto" multiple data-actions-box="true" title="pick a time">
+  <option>8:00 - 10:00</option>
+  <option>10:00 - 12:00</option>
+  <option>12:00 - 14:00</option>
+  <option>14:00 - 16:00</option>
+  <option>16:00 - 18:00</option>
+</select>
+
+</span>
+
+</div>
+
+<h3>Details</h3>
+<!-- contact info -->
+  <div class="form-group forms left spacer">
+  <label for="firstName">First Name</label>
+   <!-- pattern="[A-Za-z]+"  -->
+<input type="text" id="firstName" name="first name" required class="form-control" placeholder="First Name">
+	<label for="phoneNum" >Phone Number</label>
+	<!-- pattern="^\d{3}-\d{3}-\d{4}$" -->
+    <input type="tel" id="phoneNum" name="phone number" class="form-control" required placeholder="xxx-xxx-xxxx">
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" required class="form-control" placeholder="254 Example Ave.">
+        <label for="city">City</label>
+    <input type="text" id="city" name="city" required class="form-control" placeholder="Toronto">
+
+  </div>
+
+    <div class="form-group forms right spacer">
+    <label for="lastName">Last Name</label>
+    <input type="text" name="last name" id="lastName" required class="form-control" placeholder="Last Name">
+    <label for="emailAddress">Email</label>
+    <input type="email" name="email" id="emailAddress" class="form-control" placeholder="sophie@example.com">
+    <label for="aptNum">Apt. #</label>
+    <input type="text" name="apartment number" id="aptNum" class="form-control" placeholder="Optional Apt. #">
+    <label for="zipCode">Zip or Postal Code</label>
+    <!-- pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" -->
+    <input type="text" name="postal code" id="zipCode" required class="form-control" placeholder="A0A 0A0">
+  </div>
+
+<!--# of rooms and hours  -->
+
+<div class="form-group forms col-md-4">
+    <h4 class="padLeft">Bedrooms</h4>
+    <br>
+    <input type="button" class="btn btn-primary leftBtn btn-primary-sq"  value="-" id="bedroomMoins" >
+    <input type="text" name="number of bedrooms" class="form-control form-control-lg sq-form" value="0" id="bedroomCount">
+    <input type="button" class="btn btn-primary btn-primary-sq"  value="+" id="bedroomPlus" >
+</div>
+<div class="form-group forms col-md-4">
+    <h4 class="padLeft">Bathrooms</h4>
+    <br>
+    <input type="button" class="btn btn-primary btn-primary-sq"  value="-" id="bathroomMoins" >
+    <input type="text" name="number of bathrooms" class="form-control form-control-lg sq-form" value="0" id="bathroomCount">
+    <input type="button" class="btn btn-primary btn-primary-sq"  value="+" id="bathroomPlus" >
+</div>
+<div class="form-group forms col-md-4">
+    <h4 class="padLeft">Labour Hours</h4>
+    <br>
+    <input type="button" class="btn btn-primary btn-primary-sq"  value="-" id="hourMoins" >
+    <input type="text" name="Number of hours" class="form-control form-control-lg sq-form" value="0" id="hourCount">
+    <input type="button" class="btn btn-primary btn-primary-sq"  value="+" id="hourPlus" >
+</div>
+<!-- Type of service  -->
+<div class="form-group forms spacer" data-toggle="buttons">
+<h4>Type of Clean</h4>
+<h5>Standard cleaning costs $25 - $30 while the price for other types of cleaning vary depending on the situation</h5>
+
+  <label class="btn btn-dark active">
+    <input type="radio" name="Standard cleaning" id="standard" autocomplete="off" checked> Standard
+  </label>
+  <label class="btn btn-dark">
+    <input type="radio" name="Deep cleaning" id="deep" autocomplete="off"> Deep
+  </label>
+  <label class="btn btn-dark">
+    <input type="radio" name="Move-in/out" id="moveInOut" autocomplete="off"> Move-in/out
+  </label>
+    <label class="btn btn-dark">
+    <input type="radio" name="Post-construction" id="postConstruction" autocomplete="off"> Post-construction
+  </label>
+
+</div>
+
+
+<div class="form-group forms spacer" data-toggle="buttons">
+<h4>Frequency</h4>
+<h5>A standard cleaning on a weekly, bi-weekly, or monthly basis will cost $25 and a standard cleaning once will cost $30 </h5>
+
+  <label class="btn btn-dark active">
+    <input type="radio" name="Every Week" id="weekly" autocomplete="off" checked> Every Week
+  </label>
+  <label class="btn btn-dark">
+    <input type="radio" name="Every 2 weeks" id="biweekly" autocomplete="off"> Every 2 weeks
+  </label>
+  <label class="btn btn-dark">
+    <input type="radio" name="Every month" id="monthly" autocomplete="off"> Every month
+  </label>
+    <label class="btn btn-dark">
+    <input type="radio" name="Once" id="once" autocomplete="off"> Once
+  </label>
+
+
+</div>
+
+<div class="btn-group forms spacer" data-toggle="buttons">
+<h4>Extra Items</h4>
+<h5>Extra fees will be charged</h5>
+  <label class="btn btn-light">
+    <input type="checkbox" name="Inside Oven" checked autocomplete="off"> Inside Oven
+  </label>
+  <label class="btn btn-light">
+    <input type="checkbox" name="Inside Windows" autocomplete="off"> Inside Windows
+  </label>
+  <label class="btn btn-light">
+    <input type="checkbox" name="Inside Walls" autocomplete="off"> Inside Walls
+  </label>
+    <label class="btn btn-light">
+    <input type="checkbox" name="Inside Fridge" autocomplete="off"> Inside Fridge
+  </label>
+  <label class="btn btn-light">
+  <input type="checkbox" name="Blinds" autocomplete="off"> Blinds
+  </label>
+</div>
+<div class="spacer">
+<textarea id="msg" name="message" placeholder="Optional Message"></textarea>
+</div>
+<div class="spacer">
+<input class="btn btn-primary" type="submit" value="Submit">
+</div>
+</form>
+</div>
+
+
+<!-- beginning of footer.ejs ========================================== -->
+
+
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/bootstrap-select.js"></script>
+	<script type="text/javascript" src="assets/js/effects.js"></script>
+	<script type="text/javascript" src="assets/js/form_effects.js"></script>
+</body>
+</html>

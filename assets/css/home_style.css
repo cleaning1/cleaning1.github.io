@@ -1,0 +1,147 @@
+/*================ navbar ================*/
+
+.selected{
+    background-color: #080808;
+}
+nav.navbar.navbar-inverse.navbar-fixed-top.container-fluid {
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+/*=====================================*/
+
+.jumbotron h1 {
+	background-color: rgba(176,	215, 255, 0.7);
+	font-family: 'Lora';
+	position: relative;
+	text-align: center;
+	margin-top: 15rem;
+    font-size: 3.8rem;
+    font-weight: 800;
+	border: 3px solid #2D3142;
+	padding: 2rem;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+div.jumbotron.container-fluid {
+	background-image: url("../images/frosted_glass1.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	color: #2D3142;
+
+}
+/*remove blue border from hrefs*/
+.modal-open .modal, section:focus{
+    outline:none;
+}
+
+section.jumbotron.container-fluid {
+    background-color: #fff;
+	padding: 0 5%;
+}
+
+
+.locations {
+	padding-top: 3rem;
+	max-width: 442px;
+}
+/*===============================*/
+/*2 section list and articles*/
+.right {
+	float: right;
+	width: 50%;
+	padding-top: 2.5%;
+	padding-left: 2.5%;
+	padding-bottom: 2.5%;
+
+}
+
+.left {
+	float: left;
+	width: 50%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	padding-right: 2.5%;
+}
+/*===============================*/
+table {
+	width: 100%;
+	font-size: 21px;
+}
+
+ul {
+	font-size: 16px;
+}
+
+#about h2, #contact h2 {
+	font-family: 'Lora';
+	font-weight: 700;
+	font-size: 40px;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	color: rgba(176, 215, 255, 1);
+}
+
+/*=====================================*/
+/*Learn More Button*/
+
+.scroll #learnMore {
+  padding-top: 60px;
+}
+
+.scroll #learnMore span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 2px solid #2D3142;
+  border-radius: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.scroll #learnMore span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 2px solid #2D3142;
+  border-bottom: 2px solid #2D3142;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+
+.scroll #learnMore {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  right: 50%;
+  z-index: 2;
+  transition: opacity .5s;
+  padding-bottom: 5%;
+}
+
+.scroll #learnMore:hover {
+  opacity: .8;
+}
+
+.scroll, .scroll #learnMore:hover,
+.scroll #learnMore:active, .scroll #learnMore:visited, 
+.scroll #learnMore:focus {
+    text-decoration:none;
+}
+
+.underline {    
+    text-decoration: underline;
+}
