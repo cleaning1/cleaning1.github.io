@@ -69,6 +69,7 @@ section.jumbotron.container-fluid {
 table {
 	width: 100%;
 	font-size: 21px;
+  border: 1px solid #ddd;
 }
 
 ul {
