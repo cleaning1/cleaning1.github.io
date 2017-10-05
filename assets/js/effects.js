@@ -16,6 +16,13 @@ $(window).scroll(function() {
     }
 });
 
+// for making mobile scroll class work
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       $('nav-contact-li').addClass('active');
+       $('nav-about-li').removeClass('active');
+   }
+});
 
 //smooth scrolling for learn more:
 
