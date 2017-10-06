@@ -64,6 +64,7 @@ li.selected{
 .btn-light{
 	margin-right: 1rem;
 	color: black;
+	border: 1px solid  rgba(176,	215, 255, 1);
 }
 .btn-primary-sq{
 	width: 4rem;
