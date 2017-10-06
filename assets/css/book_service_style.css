@@ -15,8 +15,8 @@ h4 {
 	padding-bottom: 2rem;
 	font-size:2rem;
 }
-#msg{
-	width: 50%;
+#msg.form-control{
+	max-width: 674.5px;
 }
 .forms{
 	padding: 3%;
