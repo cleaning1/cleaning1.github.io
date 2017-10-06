@@ -8,6 +8,17 @@ var hourCountEl = document.getElementById("hourCount");
 var hourMoins = document.getElementById("hourMoins");
 var hourPlus = document.getElementById("hourPlus");
 
+var bedroomCountPosition = $('#bedroomCount').position();
+var bedroomPx = parseInt(bedroomCountPosition.left, 10) + 'px';
+var bathroomCountPosition = $('#bathroomCount').position();
+var bathroomPx = parseInt(bathroomCountPosition.left, 10) - 1 + 'px';
+var hourCountPosition = $('#hourCount').position();
+var hourPx = parseInt(hourCountPosition.left, 10) - 6 + 'px';
+
+$('#bedroomHeading').css('paddingLeft', bedroomPx);
+$('#bathroomHeading').css('paddingLeft', bathroomPx);
+$('#hourHeading').css('paddingLeft', hourPx);
+
 plusMinusInput(bedroomPlus, bedroomMoins, bedroomCountEl); 
 plusMinusInput(bathroomPlus, bathroomMoins, bathroomCountEl); 
 plusMinusInput(hourPlus, hourMoins, hourCountEl); 

@@ -48,9 +48,8 @@ li.selected{
     height:inherit;
 
 }
-.padLeft{
-	padding-left: 20%;
-
+.threeSecCenter{
+	margin-left: 25px;
 }
 .sq-form {
 	width: 6rem;
