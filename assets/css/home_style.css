@@ -10,26 +10,30 @@ nav.navbar.navbar-inverse.navbar-fixed-top.container-fluid {
 
 /*=====================================*/
 
+.headerContact{
+  padding-top: 25%;
+  padding-left: 3%;
+}
 .jumbotron h1 {
-	background-color: rgba(176,	215, 255, 0.7);
-	font-family: 'Lora';
-	position: relative;
-	text-align: center;
-	margin-top: 15rem;
+  background-color: rgba(176, 215, 255, 0.7);
+  font-family: 'Lora';
+  position: relative;
+  text-align: center;
+  margin-top: 20rem;
     font-size: 3.8rem;
     font-weight: 800;
-	border: 3px solid #2D3142;
-	padding: 2rem;
-	margin-left: 3%;
-	margin-right: 3%;
+  border: 3px solid #2D3142;
+  padding: 2rem;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 div.jumbotron.container-fluid {
-	background-image: url("../images/frosted_glass1.jpg");
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	color: #2D3142;
+  background-image: url("../images/frosted_glass1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #2D3142;
 
 }
 /*remove blue border from hrefs*/
@@ -39,7 +43,7 @@ div.jumbotron.container-fluid {
 
 section.jumbotron.container-fluid {
     background-color: #fff;
-	padding: 0 5%;
+  padding: 0 5%;
 }
 /*responsive line break*/
 @media screen and (min-width: 768px){
@@ -47,25 +51,25 @@ section.jumbotron.container-fluid {
 }
 
 .locations {
-	padding-top: 3rem;
-	max-width: 442px;
+  padding-top: 3rem;
+  max-width: 442px;
 }
 /*===============================*/
 /*2 section list and articles*/
 .right {
-	float: right;
-	width: 50%;
-	padding-top: 2.5%;
-	padding-left: 2.5%;
-	padding-bottom: 2.5%;
+  float: right;
+  width: 50%;
+  padding-top: 2.5%;
+  padding-left: 2.5%;
+  padding-bottom: 2.5%;
 
 }
 .left {
-	float: left;
-	width: 50%;
-	padding-top: 2.5%;
-	padding-bottom: 2.5%;
-	padding-right: 2.5%;
+  float: left;
+  width: 50%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-right: 2.5%;
 }
 /*===============================*/
 table {

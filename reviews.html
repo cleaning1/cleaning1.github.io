@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Mei's Cleaning Service</title>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta content="320" name="MobileOptimized">
+	<link href="assets/images/fav_icon.png" rel="icon" type="image/png" sizes="16x16">
+	<link href="assets/images/fav_icon32.png" rel="icon" type="image/png" sizes="32x32">
+	<link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="assets/css/home_style.css" rel="stylesheet">
+	<link href="assets/css/reviews_style.css" rel="stylesheet">
+
+	<script src="assets/js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="assets/js/review_firebase.js"></script>
+
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
+	
+	<div class='jumbotron container-fluid'>
+	<!-- nav bar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top container-fluid">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+					<a id="homeHeading" class="navbar-brand" href="index.html">Mei's</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+					<ul class="nav navbar-nav">
+						<li><a href="book_service.html">Book Service</a></li>
+						<li><a class="goTop selected">Reviews</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li id="nav-about-li"><a id="nav-about" href="index.html#about">About</a></li>
+						<li id="nav-contact-li"><a id="nav-contact" href="index.html#contact">Contact</a></li>
+					</ul>
+			</div>
+		</nav>
+<div class="container jumbotron">
+<h2>Write a review</h2>
+<br>
+<form METHOD="post" ACTION="reviews.html" role="form">
+    <div class="row">
+  <div class="form-group col-xs-5 col-lg-6">
+    <label for="name">Name: </label>
+      <input id="name" required name="name" type="text" class="form-control" />
+  </div>
+    </div>
+
+<fieldset class="rating">
+    <legend>Please rate:</legend>
+    <input checked type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Okay">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Bad">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Terrible">1 star</label>
+</fieldset>
+
+<textarea id="msg" required name="message" class="form-control" placeholder="Write a review here"></textarea>
+<br>
+<input href="reviews.html" class="btn btn-primary" id="submitBtn" type="submit" value="Submit">
+</form>
+<h2>Recent Reviews</h2>
+<div id="recentReviews0"></div>
+<div id="recentReviews1"></div>
+<div id="recentReviews2"></div>
+<div id="recentReviews3"></div>
+<div id="recentReviews4"></div>
+<div id="recentReviews5"></div>
+<div id="recentReviews6"></div>
+<div id="recentReviews7"></div>
+<div id="recentReviews8"></div>
+<div id="recentReviews9"></div>
+</div>
+
+<!-- firebase ====================== -->
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCZwYeAKMBJUvMJQ4piccc7NX1EKa_ugeg",
+    authDomain: "cleaning1-github-io.firebaseapp.com",
+    databaseURL: "https://cleaning1-github-io.firebaseio.com",
+    projectId: "cleaning1-github-io",
+    storageBucket: "",
+    messagingSenderId: "652184852466"
+  };
+  firebase.initializeApp(config);
+
+
+  // var rootRef = firebase.database().ref().child('childName');
+  // ==================================
+  // Retrieving reviews: 
+
+  var firebaseHeadingRef = firebase.database().ref().child('reviews');
+    firebaseHeadingRef.on('value', function(datasnapshot){
+	recentReviewSetup(datasnapshot.val());
+    var a = datasnapshot.val();
+    console.log(Object.keys(a));
+  });
+  // ==================================
+  var d = new Date();
+  var rootRef = firebase.database().ref('reviews');
+  $('#submitBtn').click(function(){
+	  var starNum = checkedStars();
+	  var reviewer = $('#name').val();
+	  var review = $('#msg').val();
+	  var e = {
+	  		name: reviewer,
+	  		star: starNum,
+	  		msg: review,
+	  		date: formatDate(d)
+	  };
+	  	rootRef.child(d.getTime()).set(e);
+  });
+
+</script>
+<!-- ===================================== -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/effects.js"></script>
+</body>
+</html>

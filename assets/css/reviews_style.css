@@ -1,0 +1,94 @@
+.jumbotron {
+    background-color: rgba(176,	215, 255, 0.7);
+    margin: 5rem auto;
+}
+
+form {
+	margin-bottom: 8%;
+}
+
+.staticStars{
+	color: gold;
+	font-size: 2rem;
+	text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+.reviewName{
+	margin: 1rem 0;
+	opacity: 0.95;
+}
+.reviewMsg{
+	font-size: 16px;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	font-family: 'Lora';
+}
+.reviewStar{
+    margin-top: 5rem;
+}
+.reviewDate{
+	opacity: 0.9;
+	font-size: 1.3rem;
+	margin-bottom: 5%;
+}
+
+/*star ratings========================*/
+.rating {
+    float:left;
+    padding-bottom: 2rem;
+    display: block;
+}
+legend{
+	padding-top: 2rem;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
